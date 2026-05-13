@@ -3,18 +3,32 @@
 <head>
     <title>HausMarket</title>
     <link rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<div class="container">
-    <h1>HausMarket</h1>
-    <p>Buy and Sell Anything Online</p>
+<?php include 'navbar.php'; ?>
 
-    <div class="links">
-        <a href="register.php">Register</a>
-        <a href="add_product.php">Sell Product</a>
-        <a href="products.php">View Products</a>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Buy & Sell Anything</h1>
+
+        <p>
+            The modern online marketplace for everyone.
+        </p>
+
+        <a href="products.php" class="hero-btn">
+            Explore Products
+        </a>
+
     </div>
+
+</section>
+
+<div class="footer">
+    <p>© 2025 HausMarket</p>
 </div>
 
 </body>
