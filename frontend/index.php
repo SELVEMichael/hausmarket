@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +34,15 @@
 <div class="footer">
     <p>© 2025 HausMarket</p>
 </div>
+
+<?php if(isset($_SESSION['user_id'])): ?>
+
+    <h2>
+        Welcome back,
+        <?php echo $_SESSION['username']; ?>!
+    </h2>
+
+<?php endif; ?>
 
 </body>
 </html>

@@ -1,7 +1,17 @@
 <?php
+session_start();
+?>
+
+<?php
 include '../config/db.php';
 
-$sql = "SELECT * FROM products ORDER BY id DESC";
+$sql = "
+SELECT products.*, users.username, users.profile_image
+FROM products
+JOIN users
+ON products.seller_email = users.email
+ORDER BY products.id DESC
+";
 $result = $conn->query($sql);
 ?>
 
@@ -32,7 +42,14 @@ $result = $conn->query($sql);
 
     <h3>$<?php echo $row['price']; ?></h3>
 
-    <p>Seller: <?php echo $row['seller_email']; ?></p>
+    <p>
+    Seller: @<?php echo $row['username']; ?>
+</p>
+
+<a class="edit-btn"
+   href="/hausmarket/frontend/seller_profile.php?username=<?php echo $row['username']; ?>">
+   View Seller
+</a>
 
     <a href="/hausmarket/frontend/edit_product.php?id=<?php echo $row['id']; ?>">Edit</a>
     <a href="/hausmarket/product-service/delete_product.php?id=<?php echo $row['id']; ?>">Delete</a>

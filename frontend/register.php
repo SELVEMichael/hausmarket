@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +20,14 @@
 
         <input type="text" name="fullname" placeholder="Full Name" required>
 
+        <input type="text" name="username" placeholder="Username" required>
+
         <input type="email" name="email" placeholder="Email" required>
 
         <input type="password" name="password" placeholder="Password" required>
+
+        <textarea name="bio" placeholder="Short Bio"></textarea>
+        <input type="text" name="profile_image" placeholder="Profile Image URL">
 
         <button type="submit">Register</button>
     </form>

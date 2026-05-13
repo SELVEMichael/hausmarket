@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +24,7 @@
 
     <form action="../product-service/create_product.php" method="POST">
 
-        <input type="email" name="seller_email" placeholder="Seller Email" required>
+
 
         <input type="text" name="product_name" placeholder="Product Name" required>
 

@@ -1,9 +1,18 @@
 <?php
+session_start();
+
 include '../config/db.php';
+
+if (!isset($_SESSION['user_id'])) {
+
+    header("Location: /hausmarket/frontend/login.php");
+    exit();
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $seller_email = $_POST['seller_email'];
+    $seller_email = $_SESSION['email'];
+
     $product_name = $_POST['product_name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
