@@ -31,6 +31,9 @@ $result = $conn->query($sql);
 
     <p>Seller: <?php echo $row['seller_email']; ?></p>
 
+    <a href="/hausmarket/frontend/edit_product.php?id=<?php echo $row['id']; ?>">Edit</a>
+    <a href="/hausmarket/product-service/delete_product.php?id=<?php echo $row['id']; ?>">Delete</a>
+    
 </div>
 
 <?php endwhile; ?>
