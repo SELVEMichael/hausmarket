@@ -1,36 +1,85 @@
 # HausMarket 🛒
 
-HausMarket is a modern ecommerce marketplace web application where users can browse, buy, and sell products online. Users can create accounts, manage profiles, post products, edit listings, and explore products uploaded by other sellers.
+HausMarket is a modern ecommerce marketplace web application where users can browse, buy, and sell products online. Users can create accounts, manage profiles, upload products, edit listings, and explore products uploaded by other sellers.
+
+The platform was built using PHP, MySQL, HTML, CSS, and XAMPP.
 
 ---
 
 # Features
 
-## User Authentication
+## Authentication System
+
 - User registration
 - User login/logout
 - PHP session authentication
-- Protected routes for sellers
+- Redirect-after-login system
+- Protected seller pages
+- Dynamic navigation bar
 
-## User Profiles
+---
+
+# User Profiles
+
 - Custom usernames
-- Profile images
-- Editable user profiles
+- Editable profiles
 - Seller profile pages
+- Profile picture uploads
+- Profile image URL support
+- User bios
 
-## Product Marketplace
-- Add products
+---
+
+# Marketplace Features
+
+- Browse products
+- Sell products
 - Edit products
 - Delete products
-- Browse marketplace products
-- Responsive product grid
-- Seller usernames displayed instead of emails
+- Product ownership permissions
+- PNG Kina currency support (K)
+- Seller usernames instead of emails
 
-## Responsive Design
+---
+
+# Product Image Uploads
+
+Users can:
+
+- Upload product images from local device storage
+- Use image URLs
+- Keep existing images when editing products
+
+Supported formats:
+
+- JPG
+- JPEG
+- PNG
+- GIF
+- WEBP
+
+---
+
+# Shopping Experience
+
+- Add to Cart button
+- View Seller button
+- Buyer/Seller conditional actions
+- Guests redirected to login when adding to cart
+- Automatic redirect back after login/register
+
+---
+
+# Modern UI/UX
+
+- Responsive design
 - Mobile-friendly layout
-- Responsive navigation bar
-- Responsive product cards
-- Optimized for desktop, tablet, and smartphone screens
+- Glassmorphism design
+- Hero background images
+- Marketplace background styling
+- Modern authentication pages
+- Responsive product grid
+- Professional buttons and cards
 
 ---
 
@@ -41,11 +90,12 @@ HausMarket is a modern ecommerce marketplace web application where users can bro
 - HTML5
 - CSS3
 - XAMPP
-- Git & GitHub
+- Git
+- GitHub
 
 ---
 
-# Project Structure
+# Folder Structure
 
 ```bash
 hausmarket/
@@ -67,8 +117,11 @@ hausmarket/
 │   ├── products.php
 │   ├── add_product.php
 │   ├── edit_product.php
+│   ├── cart.php
+│   ├── uploads/
 │   └── assets/
-│       └── style.css
+│       ├── style.css
+│       └── images/
 │
 ├── product-service/
 │   ├── create_product.php
@@ -109,6 +162,7 @@ C:\xampp\htdocs\
 ## 3. Start XAMPP
 
 Start:
+
 - Apache
 - MySQL
 
@@ -118,9 +172,7 @@ Start:
 
 Open:
 
-```bash
 http://localhost/phpmyadmin
-```
 
 Create a database named:
 
@@ -153,29 +205,35 @@ http://localhost/hausmarket/frontend/
 # Screenshots
 
 ## Homepage
-Modern responsive landing page with hero section and navigation.
-<img width="1357" height="674" alt="image" src="https://github.com/user-attachments/assets/9160d372-75bd-4b70-b9e7-8add9248666f" />
+
+Modern hero section with responsive glassmorphism UI.
 
 ## Marketplace
-Responsive product cards with edit/delete functionality.
-<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/297eb89b-ed56-44d3-a0c1-aaa218bb8650" />
+
+Responsive product grid with buyer/seller interactions.
+
+## Authentication
+
+Modern sign in and registration pages.
 
 ## User Profiles
-Seller profile pages with usernames and profile images.
-<img width="1365" height="627" alt="image" src="https://github.com/user-attachments/assets/a2114544-e5ad-4ca7-a02a-4f39db65ec36" />
+
+Editable profile pages with image upload support.
 
 ---
 
 # Future Improvements
 
-- Shopping cart system
+- Real shopping cart system
 - Checkout/payment integration
 - Product categories
 - Search functionality
-- Product image uploads
+- Wishlist/favorites
 - Messaging system
 - Seller ratings
 - Admin dashboard
+- Order history
+- Notifications system
 
 ---
 
