@@ -30,7 +30,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="assets/style.css">
 
 </head>
-<body>
+<body class="marketplace-page">
 
 <?php include 'navbar.php'; ?>
 

@@ -10,8 +10,21 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
     color: #222;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.25),
+            rgba(0,0,0,0.25)
+        ),
+        url("./images/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
 }
 
 /* NAVBAR */
@@ -47,24 +60,35 @@ body {
 /* HERO */
 
 .hero {
+    position: relative;
+
     height: 85vh;
-    background: linear-gradient(to right, #111827, #1f2937);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
     color: white;
+
     padding: 20px;
 }
 
 .hero-content h1 {
     font-size: 60px;
     margin-bottom: 20px;
+
+    text-shadow:
+        0 4px 12px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
     font-size: 20px;
     margin-bottom: 30px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.4);
 }
 
 .hero-btn {
@@ -79,6 +103,12 @@ body {
 
 .hero-btn:hover {
     background: #1d4ed8;
+}
+
+.hero-content {
+    backdrop-filter: blur(2px);
+    padding: 30px;
+    border-radius: 20px;
 }
 
 /* CONTAINER */
@@ -152,7 +182,7 @@ button:hover {
 }
 
 .product-card {
-    background: white;
+    background: rgba(255,255,255,0.92);
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -232,11 +262,26 @@ button:hover {
 /* FOOTER */
 
 .footer {
-    background: #111827;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
     color: white;
+
     text-align: center;
-    padding: 20px;
+
+    padding: 22px;
+
     margin-top: 60px;
+
+    font-size: 15px;
+
+    letter-spacing: 0.5px;
 }
 
 /* MOBILE */
@@ -250,6 +295,7 @@ button:hover {
 
     .hero-content h1 {
         font-size: 42px;
+    
     }
 
 }
@@ -296,25 +342,33 @@ button:hover {
     /* HERO */
 
     .hero {
-        height: auto;
-        padding: 80px 20px;
-    }
+    position: relative;
 
-    .hero-content h1 {
-        font-size: 38px;
-        line-height: 1.2;
-    }
+    height: 85vh;
 
-    .hero-content p {
-        font-size: 18px;
-    }
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.35)
+        ),
+        url("./images/hero-bg.jpg");
 
-    .hero-btn {
-        display: inline-block;
-        width: 100%;
-        max-width: 300px;
-    }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 20px;
+}
+
+ 
     /* CONTAINER */
 
     .container {
@@ -337,6 +391,7 @@ button:hover {
 
     .product-card img {
         height: 220px;
+        backdrop-filter: blur(8px);
     }
 
     /* FORMS */
@@ -391,4 +446,49 @@ button:hover {
         padding: 15px;
     }
 
+}
+
+/* MARKETPLACE PAGE */
+
+.marketplace-page {
+
+    background-image:
+        linear-gradient(
+            rgba(244,246,249,0.72),
+            rgba(244,246,249,0.72)
+        ),
+        url("./images/market-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* WELCOME BANNER */
+
+.welcome-banner {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 18px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+    font-size: 18px;
+
+    letter-spacing: 0.5px;
+}
+
+.welcome-banner span {
+
+    font-weight: bold;
+
+    color: #93c5fd;
 }

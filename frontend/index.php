@@ -13,6 +13,21 @@ session_start();
 
 <?php include 'navbar.php'; ?>
 
+<?php if(isset($_SESSION['user_id'])): ?>
+
+<div class="welcome-banner">
+
+    <p>
+        Welcome back,
+        <span>
+            @<?php echo $_SESSION['username']; ?>
+        </span>
+    </p>
+
+</div>
+
+<?php endif; ?>
+
 <section class="hero">
 
     <div class="hero-content">
@@ -32,17 +47,8 @@ session_start();
 </section>
 
 <div class="footer">
-    <p>© 2025 HausMarket</p>
+    <p>© 2026 HausMarket | IS312 Major Project</p>
 </div>
-
-<?php if(isset($_SESSION['user_id'])): ?>
-
-    <h2>
-        Welcome back,
-        <?php echo $_SESSION['username']; ?>!
-    </h2>
-
-<?php endif; ?>
-
+ 
 </body>
 </html>
