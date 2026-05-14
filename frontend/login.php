@@ -2,10 +2,6 @@
 session_start();
 ?>
 
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,42 +16,67 @@ session_start();
     <link rel="stylesheet" href="assets/style.css">
 
 </head>
-<body>
+<body class="login-page">
 
 <?php include 'navbar.php'; ?>
 
-<div class="form-container">
+<div class="login-wrapper">
 
-    <h1>Sign In</h1>
+    <div class="login-card">
 
-    <form action="/hausmarket/user-service/login_user.php"
-          method="POST">
+        <div class="login-icon">
+            🔒
+        </div>
 
-        <input type="email"
-               name="email"
-               placeholder="Email"
-               required>
-
-        <input type="password"
-               name="password"
-               placeholder="Password"
-               required>
-
-        <button type="submit">
+        <h1 class="login-title">
             Sign In
-        </button>
+        </h1>
 
-    </form>
+        <p class="login-subtitle">
+            Welcome back! Please sign in to continue.
+        </p>
 
-    <p style="margin-top:20px; text-align:center;">
+        <form action="/hausmarket/user-service/login_user.php"
+              method="POST">
 
-        Don't have an account?
+            <label>Email</label>
 
-        <a href="register.php">
-            Register
-        </a>
+            <input type="email"
+                   name="email"
+                   placeholder="Enter your email"
+                   required>
 
-    </p>
+            <label>Password</label>
+
+            <input type="password"
+                   name="password"
+                   placeholder="Enter your password"
+                   required>
+
+            <button type="submit"
+                    class="login-btn">
+
+                Sign In →
+
+            </button>
+
+        </form>
+
+        <div class="login-divider">
+            OR
+        </div>
+
+        <p class="register-text">
+
+            Don't have an account?
+
+            <a href="register.php">
+                Register
+            </a>
+
+        </p>
+
+    </div>
 
 </div>
 

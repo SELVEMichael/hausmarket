@@ -37,7 +37,7 @@ $result = $conn->query($sql);
 <div class="container">
 
     <h1 class="products-title">
-        Marketplace Products
+        Listings
     </h1>
 
     <div class="products-grid">
@@ -59,7 +59,7 @@ $result = $conn->query($sql);
                     </p>
 
                     <div class="price">
-                        $<?php echo $row['price']; ?>
+                        K<?php echo number_format($row['price'], 2); ?>
                     </div>
 
                     <p>
@@ -69,18 +69,47 @@ $result = $conn->query($sql);
 
                     <div class="card-buttons">
 
-                        <a class="edit-btn"
-                           href="/hausmarket/frontend/edit_product.php?id=<?php echo $row['id']; ?>">
-                            ✏ Edit
-                        </a>
+<?php if(isset($_SESSION['user_id']) &&
+          $_SESSION['email'] == $row['seller_email']): ?>
 
-                        <a class="delete-btn"
-                           href="/hausmarket/product-service/delete_product.php?id=<?php echo $row['id']; ?>"
-                           onclick="return confirm('Delete this product?');">
-                            🗑 Delete
-                        </a>
+    <!-- OWNER BUTTONS -->
 
-                    </div>
+    <a class="edit-btn"
+       href="/hausmarket/frontend/edit_product.php?id=<?php echo $row['id']; ?>">
+
+        ✏ Edit
+
+    </a>
+
+    <a class="delete-btn"
+       href="/hausmarket/product-service/delete_product.php?id=<?php echo $row['id']; ?>"
+       onclick="return confirm('Delete this product?');">
+
+        🗑 Delete
+
+    </a>
+
+<?php else: ?>
+
+    <!-- BUYER BUTTONS -->
+
+    <a class="cart-btn"
+       href="/hausmarket/frontend/cart.php?id=<?php echo $row['id']; ?>">
+
+        🛒 Add to Cart
+
+    </a>
+
+    <a class="seller-btn"
+       href="/hausmarket/frontend/seller_profile.php?username=<?php echo $row['username']; ?>">
+
+        👤 View Seller
+
+    </a>
+
+<?php endif; ?>
+
+</div>
 
                 </div>
 

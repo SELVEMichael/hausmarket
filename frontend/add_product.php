@@ -20,7 +20,7 @@ if (!isset($_SESSION['user_id'])) {
 <?php include 'navbar.php'; ?>
 
 <div class="container">
-    <h2>Sell a Product</h2>
+    <<h1 class="page-title"> Sell a Product </h1>
 
     <form action="../product-service/create_product.php" method="POST">
 
