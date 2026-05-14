@@ -38,38 +38,78 @@ $user = $result->fetch_assoc();
     <link rel="stylesheet" href="assets/style.css">
 
 </head>
-<body>
+<body class="login-page">
 
 <?php include 'navbar.php'; ?>
 
-<div class="form-container">
+<div class="login-wrapper">
 
-    <h1>Edit Profile</h1>
+    <div class="profile-card">
 
-    <form action="/hausmarket/user-service/update_profile.php"
-          method="POST">
+        <div class="login-icon">
+            👤
+        </div>
 
-        <input type="text"
-               name="fullname"
-               value="<?php echo $user['fullname']; ?>"
-               required>
+        <h1 class="profile-title">
+            Edit Profile
+        </h1>
 
-        <input type="text"
-               name="username"
-               value="<?php echo $user['username']; ?>"
-               required>
+        <p class="profile-subtitle">
+            Update your information and manage your profile.
+        </p>
 
-        <textarea name="bio"><?php echo $user['bio']; ?></textarea>
+        <form action="/hausmarket/user-service/update_profile.php"
+              method="POST"
+              enctype="multipart/form-data">
 
-        <input type="text"
-               name="profile_image"
-               value="<?php echo $user['profile_image']; ?>">
+            <label>Full Name</label>
 
-        <button type="submit">
-            Update Profile
-        </button>
+            <input type="text"
+                   name="fullname"
+                   value="<?php echo htmlspecialchars($user['fullname']); ?>"
+                   required>
 
-    </form>
+            <label>Username</label>
+
+            <input type="text"
+                   name="username"
+                   value="<?php echo htmlspecialchars($user['username']); ?>"
+                   required>
+
+            <label>Bio</label>
+
+            <textarea name="bio"><?php echo htmlspecialchars($user['bio']); ?></textarea>
+
+            <label>Profile Picture URL</label>
+
+            <input type="text"
+                   name="profile_image"
+                   value="<?php echo htmlspecialchars($user['profile_image']); ?>">
+
+            <input type="hidden"
+                   name="current_profile_image"
+                   value="<?php echo htmlspecialchars($user['profile_image']); ?>">
+
+            <label>Upload New Profile Image</label>
+
+            <input type="file"
+                   name="uploaded_profile_image"
+                   accept="image/*">
+
+            <p class="upload-note">
+                Leave empty if you don't want to change your profile picture.
+            </p>
+
+            <button type="submit"
+                    class="login-btn">
+
+                💾 Update Profile
+
+            </button>
+
+        </form>
+
+    </div>
 
 </div>
 

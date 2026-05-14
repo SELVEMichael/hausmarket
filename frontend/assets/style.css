@@ -851,3 +851,140 @@ button:hover {
         font-size: 42px;
     }
 }
+
+/* PROFILE EDIT PAGE */
+
+.profile-card {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 24px;
+
+    padding: 50px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.3);
+
+    color: white;
+}
+
+/* PROFILE TITLES */
+
+.profile-title {
+
+    text-align: center;
+
+    font-size: 58px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.5);
+}
+
+.profile-subtitle {
+
+    text-align: center;
+
+    color: rgba(255,255,255,0.82);
+
+    margin-bottom: 40px;
+
+    font-size: 20px;
+}
+
+/* PROFILE LABELS */
+
+.profile-card label {
+
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+    color: white;
+}
+
+/* PROFILE INPUTS */
+
+.profile-card input,
+.profile-card textarea {
+
+    width: 100%;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    border: none;
+
+    font-size: 16px;
+
+    background: rgba(255,255,255,0.94);
+
+    color: #111827;
+}
+
+/* TEXTAREA */
+
+.profile-card textarea {
+
+    min-height: 160px;
+
+    resize: vertical;
+}
+
+/* FILE INPUT */
+
+.profile-card input[type="file"] {
+
+    background: rgba(255,255,255,0.12);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* NOTE */
+
+.upload-note {
+
+    margin-top: 10px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+
+    .profile-card {
+
+        padding: 35px 25px;
+    }
+
+    .profile-title {
+
+        font-size: 42px;
+    }
+
+    .profile-subtitle {
+
+        font-size: 17px;
+    }
+}

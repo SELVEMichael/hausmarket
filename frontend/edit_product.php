@@ -65,10 +65,15 @@ if (!$product) {
                    step="0.01"
                    name="price"
                    value="<?php echo htmlspecialchars($product['price']); ?>">
+            
+            <input type="hidden"
+       name="current_image"
+       value="<?php echo htmlspecialchars($product['image_url']); ?>">       
 
             <input type="file"
        name="product_image"
        accept="image/*">
+
 
             <button type="submit">Update Product</button>
 

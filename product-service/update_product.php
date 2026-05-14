@@ -15,7 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $product_name = $_POST['product_name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
-    $image_url = $_POST['image_url'];
+    $image_url = !empty($_POST['image_url'])
+    ? $_POST['image_url']
+    : $_POST['current_image'];
 
     if (!empty($_FILES['product_image']['name'])) {
 
