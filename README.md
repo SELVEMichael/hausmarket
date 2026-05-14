@@ -181,7 +181,7 @@ Seller profile pages with usernames and profile images.
 
 # Author
 
-Developed by Michael.
+Developed by Brenden Kambuka, Michael Selve & Rita Wak
 
 ---
 
