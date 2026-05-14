@@ -208,17 +208,31 @@ http://localhost/hausmarket/frontend/
 
 Modern hero section with responsive glassmorphism UI.
 
+<img width="1365" height="638" alt="image" src="https://github.com/user-attachments/assets/4f198fe0-3d9e-4012-9d4a-d4dd48a07ec3" />
+
+
 ## Marketplace
 
 Responsive product grid with buyer/seller interactions.
+
+<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/ad8f4b62-9cbf-4235-bcc6-d114a5843172" />
+
 
 ## Authentication
 
 Modern sign in and registration pages.
 
+<img width="1365" height="636" alt="image" src="https://github.com/user-attachments/assets/9c4d475c-ff8f-44ae-ac74-29009726e67d" />
+
+<img width="1365" height="640" alt="image" src="https://github.com/user-attachments/assets/5385ccfc-76ee-4953-9002-5b230c85430c" />
+
+
 ## User Profiles
 
 Editable profile pages with image upload support.
+
+<img width="1365" height="638" alt="image" src="https://github.com/user-attachments/assets/661b3b36-1aba-4b98-848e-18e7bf459425" />
+
 
 ---
 
