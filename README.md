@@ -91,7 +91,7 @@ hausmarket/
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/hausmarket.git
+git clone https://github.com/SELVEMichael/hausmarket.git
 ```
 
 ---
