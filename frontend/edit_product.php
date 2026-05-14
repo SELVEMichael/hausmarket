@@ -43,7 +43,9 @@ if (!$product) {
 
     <div class="card">
 
-        <form action="/hausmarket/product-service/update_product.php" method="POST">
+        <form action="/hausmarket/product-service/update_product.php"
+      method="POST"
+      enctype="multipart/form-data">
 
             <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
 
@@ -64,9 +66,9 @@ if (!$product) {
                    name="price"
                    value="<?php echo htmlspecialchars($product['price']); ?>">
 
-            <input type="text"
-                   name="image_url"
-                   value="<?php echo htmlspecialchars($product['image_url']); ?>">
+            <input type="file"
+       name="product_image"
+       accept="image/*">
 
             <button type="submit">Update Product</button>
 
