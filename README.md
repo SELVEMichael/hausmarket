@@ -151,31 +151,18 @@ http://localhost/hausmarket/frontend/
 ---
 
 # Screenshots
-Home Page
-<img width="1357" height="674" alt="image" src="https://github.com/user-attachments/assets/9160d372-75bd-4b70-b9e7-8add9248666f" />
-Products Page
-<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/297eb89b-ed56-44d3-a0c1-aaa218bb8650" />
-Sign In Page
-<img width="1364" height="602" alt="image" src="https://github.com/user-attachments/assets/cdcacbf5-2d4e-4264-8c52-a7611613258c" />
-Register Page
-<img width="1365" height="636" alt="image" src="https://github.com/user-attachments/assets/57cf670d-9115-4933-af73-aae79b4308cd" />
-Sell Products Page (After Signing In)
-<img width="1365" height="639" alt="image" src="https://github.com/user-attachments/assets/e4751840-690c-4a8f-8d66-f10bbdf1b235" />
-Profile Page (After Signing In)
-<img width="1365" height="627" alt="image" src="https://github.com/user-attachments/assets/a2114544-e5ad-4ca7-a02a-4f39db65ec36" />
-
-
-
-
 
 ## Homepage
 Modern responsive landing page with hero section and navigation.
+<img width="1357" height="674" alt="image" src="https://github.com/user-attachments/assets/9160d372-75bd-4b70-b9e7-8add9248666f" />
 
 ## Marketplace
 Responsive product cards with edit/delete functionality.
+<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/297eb89b-ed56-44d3-a0c1-aaa218bb8650" />
 
 ## User Profiles
 Seller profile pages with usernames and profile images.
+<img width="1365" height="627" alt="image" src="https://github.com/user-attachments/assets/a2114544-e5ad-4ca7-a02a-4f39db65ec36" />
 
 ---
 
