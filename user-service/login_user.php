@@ -28,8 +28,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['email'] = $user['email'];
         $_SESSION['profile_image'] = $user['profile_image'];
 
-        header("Location: /hausmarket/frontend/index.php");
-        exit();
+        if (isset($_SESSION['redirect_after_login'])) {
+
+    $redirect = $_SESSION['redirect_after_login'];
+
+    unset($_SESSION['redirect_after_login']);
+
+    header("Location: " . $redirect);
+
+} else {
+
+    header("Location: /hausmarket/frontend/index.php");
+}
+
+exit();
 
     } else {
 

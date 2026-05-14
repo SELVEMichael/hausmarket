@@ -1,4 +1,6 @@
-<?php
+<?php 
+session_start();
+
 include '../config/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -28,8 +30,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
 
-        header("Location: /hausmarket/frontend/index.php");
-        exit();
+$_SESSION['user_id'] = $conn->insert_id;
+$_SESSION['fullname'] = $fullname;
+$_SESSION['username'] = $username;
+$_SESSION['email'] = $email;
+$_SESSION['profile_image'] = $profile_image;
+
+        if (isset($_SESSION['redirect_after_login'])) {
+
+    $redirect = $_SESSION['redirect_after_login'];
+
+    unset($_SESSION['redirect_after_login']);
+
+    header("Location: " . $redirect);
+
+} else {
+
+    header("Location: /hausmarket/frontend/index.php");
+}
 
     } else {
 

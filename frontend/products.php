@@ -94,7 +94,7 @@ $result = $conn->query($sql);
     <!-- BUYER BUTTONS -->
 
     <a class="cart-btn"
-       href="/hausmarket/frontend/cart.php?id=<?php echo $row['id']; ?>">
+    href="/hausmarket/frontend/cart.php?id=<?php echo $row['id']; ?>">
 
         🛒 Add to Cart
 

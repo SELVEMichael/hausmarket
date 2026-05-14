@@ -988,3 +988,57 @@ button:hover {
         font-size: 17px;
     }
 }
+
+/* FORCE PROFILE TEXT COLORS */
+
+.profile-title,
+.profile-subtitle,
+.profile-card label,
+.upload-note {
+
+    color: white !important;
+}
+
+/* TITLE */
+
+.profile-title {
+
+    font-size: 58px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* SUBTITLE */
+
+.profile-subtitle {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    color: rgba(255,255,255,0.82) !important;
+
+    font-size: 18px;
+}
+
+/* LABELS */
+
+.profile-card label {
+
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}

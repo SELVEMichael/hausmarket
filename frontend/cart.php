@@ -1,12 +1,25 @@
 <?php
 session_start();
+
+/* CHECK LOGIN */
+
+if (!isset($_SESSION['user_id'])) {
+
+    /* SAVE REDIRECT */
+
+    $_SESSION['redirect_after_login'] =
+        "/hausmarket/frontend/cart.php?id=" . $_GET['id'];
+
+    header("Location: /hausmarket/frontend/login.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 
-    <title>Cart</title>
+    <title>Shopping Cart</title>
 
     <meta charset="UTF-8">
 
@@ -16,22 +29,24 @@ session_start();
     <link rel="stylesheet" href="assets/style.css">
 
 </head>
-<body>
+<body class="marketplace-page">
 
 <?php include 'navbar.php'; ?>
 
-<div class="container">
+<div class="login-wrapper">
 
-    <div class="form-container">
+    <div class="profile-card">
 
-        <h1 class="page-title">
+        <div class="login-icon">
+            🛒
+        </div>
+
+        <h1 class="profile-title">
             Shopping Cart
         </h1>
 
-        <p style="color:white; text-align:center;">
-
-            Cart system coming soon.
-
+        <p class="profile-subtitle">
+            Your cart system is coming soon.
         </p>
 
     </div>
